@@ -139,8 +139,6 @@ class App extends Component {
 
     loopSibbling(row, cell);
 
-    console.log(otherEmptySibblings.length);
-
     otherEmptySibblings.forEach(sibbling => {
       const currCell = newBoard[sibbling[0]][sibbling[1]];
       newBoard[sibbling[0]][sibbling[1]] = {
@@ -153,7 +151,6 @@ class App extends Component {
       const nb = newBoard.reduce((acc, board) => {
         return acc + board.filter(b => b.isOpen).length;
       }, 0);
-      console.log(nb);
       return {
         ...prevState,
         board: newBoard,
@@ -203,7 +200,6 @@ class App extends Component {
 
   render() {
     const { board, isLose, isPlaying, isWin } = this.state;
-    console.log("render", this.state);
 
     return (
       <div className="game">

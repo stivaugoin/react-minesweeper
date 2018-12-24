@@ -1,20 +1,39 @@
 {
   "name": "react-minesweeper",
   "version": "0.1.0",
-  "private": true,
+  "author": "Steve Bourgoin",
+  "license": "MIT",
+  "homepage": "http://stivaugoin.github.io/react-minesweeper",
   "dependencies": {
     "classnames": "^2.2.6",
+    "gh-pages": "^1.2.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "styled-components": "^4.1.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "prettier": "prettier es5 --write \"{src,__{tests,mocks}__}/**/*.js\"",
+    "lint": "eslint .",
+    "flow": "flow"
   },
   "devDependencies": {
-    "prettier": "1.14.2"
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "flow-bin": "^0.89.0",
+    "prettier": "1.15.3"
   }
 }
